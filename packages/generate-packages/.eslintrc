@@ -1,0 +1,14 @@
+{
+    "parserOptions": {
+      "tsconfigRootDir": "packages/my-schematics",
+      "project": [
+        "./tsconfig.json"
+      ]
+    },
+    "ignorePatterns": [
+      "*.d.ts",
+      "*.d.js",
+      "*.js.map",
+      "*/files/**/*"
+    ]
+  }

@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "module": {
+      "description": "Create a library component for @samiraetc",
+      "schema": "./module/schema.json",
+      "factory": "./module/index#generate"
+    }
+  }
+}

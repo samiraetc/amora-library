@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "module",
+    "title": "Create lib component",
+    "type": "object",
+    "description": "Generate a lib component for @amora-library",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Name of component",
+        "$default": {
+          "$source": "argv",
+          "index": 0
+        },
+        "x-prompt": "What's the component name?"
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of component",
+        "$default": {
+          "$source": "argv",
+          "index": 1
+        },
+        "x-prompt": "What's the component description?"
+      },
+      "author": {
+        "type": "string",
+        "description": "Author of component",
+        "x-prompt": "Who is the author? (name <e-mail>)",
+        "default": "Samira Costa <samiramanuelac@gmail.com>"
+      }
+    },
+    "required": ["name", "description", "author"]
+  }
+  

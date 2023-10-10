@@ -1,0 +1,65 @@
+{/* <%= classify(name) %>.mdx */}
+
+import {
+  Canvas,
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  Controls,
+  Stories,
+} from "@storybook/blocks";
+
+import * as <%= classify(name) %>Stories from './<%= classify(name) %>.stories';
+
+<Meta of={<%= classify(name) %>Stories} />
+
+
+
+<Title />
+
+This component should be used...
+
+
+<Primary />
+<Controls />
+
+
+# Usage
+
+Install this component:
+
+```bash
+npm install --save @samiraetc/<%= dasherize(name) %>
+```
+
+or
+
+```bash
+yarn add @samiraetc/<%= dasherize(name) %>
+```
+
+
+### Scripts
+
+
+Import the component using `require` in your page:
+
+```jsx
+const <%= classify(name) %> = require('@samiraetc/<%= dasherize(name) %>');
+```
+
+or
+
+```tsx
+import <%= classify(name) %> from '@samiraetc/<%= dasherize(name) %>';
+```
+
+# Examples
+
+<Stories />
+
+
+
+
