@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "steoates.autoimport",
+    "dsznajder.es7-react-js-snippets",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "ms-vscode.vscode-typescript-next",
+    "firsttris.vscode-jest-runner",
+    "esbenp.prettier-vscode",
+    "sibiraj-s.vscode-scss-formatter",
+    "mrmlnc.vscode-scss",
+    "ms-vscode.js-debug",
+    "stylelint.vscode-stylelint"
+  ]
+}

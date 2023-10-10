@@ -1,0 +1,27 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+
+# Dependencies
+node_modules/
+
+# Builds
+*.tgz
+build
+coverage
+lib
+packages/**/lib
+collected_coverages
+assets
+!packages/**/assets
+story
+storybook-static
+.npmrc
+
+# System files
+.DS_Store
+
+# IDEs
+.idea/

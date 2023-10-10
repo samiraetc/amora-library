@@ -1,0 +1,118 @@
+{
+  "root": true,
+  "plugins": ["@typescript-eslint", "react-hooks", "prettier", "sonarjs", "import", "react"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:sonarjs/recommended",
+    "prettier",
+    "plugin:tailwindcss/recommended"
+    
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "sonarjs/no-duplicate-string": "off",
+    "react/display-name": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-unused-vars": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "no-use-before-define": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "js": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "warnOnUnsupportedTypeScriptVersion": false,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint", "react-hooks"],
+      "files": ["*.ts?(x)", "**/*.ts?(x)"],
+      "extends": [
+        "airbnb-typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parserOptions": {
+        "project": ["./tsconfig.lint.json"]
+      },
+      "rules": {
+        "max-len": [
+          "warn",
+          120,
+          2,
+          {
+            "ignoreUrls": true,
+            "ignoreComments": false,
+            "ignoreStrings": true
+          }
+        ],
+        "arrow-parens": [
+          "error",
+          "as-needed",
+          {
+            "requireForBlockBody": true
+          }
+        ],
+        "@typescript-eslint/lines-between-class-members": [
+          "error",
+          "always",
+          {
+            "exceptAfterSingleLine": true
+          }
+        ],
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/no-unsafe-assignment": ["warn"],
+        "@typescript-eslint/no-unsafe-member-access": ["warn"],
+        "@typescript-eslint/no-unsafe-call": ["warn"],
+        "import/prefer-default-export": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "type",
+              "builtin",
+              "external",
+              "internal",
+              ["parent", "sibling", "index"],
+              "object"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "ignorePatterns": ["node_modules", "coverage", "modules/**/lib/**/*", "build"]
+}

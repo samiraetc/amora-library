@@ -1,0 +1,14 @@
+/*.js
+**/*.js
+packages/**/node_modules
+node_modules
+build
+demo
+coverage
+i18n
+mocks
+.vscode
+lib
+types
+stories
+__tests__
